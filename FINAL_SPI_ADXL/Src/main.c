@@ -62,16 +62,16 @@ static void MX_SPI1_Init(void);
 	
 	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_1,GPIO_PIN_RESET);
 	address=0x31;
-	HAL_SPI_Transmit(&hspi1,&address,1,50);
+	HAL_SPI_Transmit(&hspi2,&address,1,50);
 	data=0x0B;
-	HAL_SPI_Transmit(&hspi1,&data,1,50);
+	HAL_SPI_Transmit(&hspi2,&data,1,50);
   HAL_GPIO_WritePin(GPIOA,GPIO_PIN_1,GPIO_PIN_SET);
 
   HAL_GPIO_WritePin(GPIOA,GPIO_PIN_1,GPIO_PIN_RESET);
 	address=0x2D;
-	HAL_SPI_Transmit(&hspi1,&address,1,50);
+	HAL_SPI_Transmit(&hspi2,&address,1,50);
 	data=0x08;
-	HAL_SPI_Transmit(&hspi1,&data,1,50);
+	HAL_SPI_Transmit(&hspi2,&data,1,50);
   HAL_GPIO_WritePin(GPIOA,GPIO_PIN_1,GPIO_PIN_SET);
 
 /* USER CODE END 0 */
